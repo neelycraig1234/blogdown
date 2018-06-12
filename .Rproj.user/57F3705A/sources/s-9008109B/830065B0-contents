@@ -1,0 +1,124 @@
+# =====================================================================================================================
+# = Blogdown                                                                                                          =
+# =                                                                                                                   =
+# = Author: Andrew B. Collier <andrew@exegetic.biz> | @datawookie                                                     =
+# =====================================================================================================================
+ 
+# The blogdown package provides a simple way to generate a static web site using R Markdown and Hugo.
+# 
+# - https://github.com/rstudio/blogdown
+
+# If necessary, install blogdown.
+#
+# > install.packages("blogdown")
+# > devtools::install_github("rstudio/blogdown")
+
+# The blogdown package uses a static site generator.
+#
+# - Hugo (https://gohugo.io/)
+# - Jekyll (https://jekyllrb.com/)
+
+# NOTE: The description given here lays out the manual blog creation process using functions from the blogdown package.
+#       You can also create a blogdown site by choosing the appropriate option when creating a new project.
+
+# CONFIGURATION -------------------------------------------------------------------------------------------------------
+
+# LIBRARIES -----------------------------------------------------------------------------------------------------------
+
+# CREATE NEW SITE -----------------------------------------------------------------------------------------------------
+
+# 1. Use RStudio to create a new project in an empty folder.
+# 2. Enable Git for this project.
+# 3. Create a README.md file. Stage and commit the project files.
+
+blogdown::new_site()
+
+# Set the default author name.
+#
+options(blogdown.author = 'Andrew')
+
+# This will download some content and setup the skeleton for your new site.
+
+# Start a local web server.
+#
+blogdown::serve_site()
+#
+# You can stop the server at any time using: blogdown::stop_server().
+
+# You will be able to see the site in the RStudio viewer or using a browser at http://127.0.0.1:4321.
+
+# CREATE NEW POST -----------------------------------------------------------------------------------------------------
+
+# The site content lives in the content/post folder.
+#
+# Stop the web server by pressing the Stop button in RStudio.
+#
+# Create some new posts. You can use either plain markdown or R markdown.
+
+# A plain Markdown post.
+#
+blogdown::new_post("First New Post")
+
+# A R Markdown post.
+#
+blogdown::new_post("Another New Post", ext = '.Rmd')
+
+# Add some content to these newly created files.
+
+# You can set the default content type.
+#
+options(blogdown.ext = '.Rmd')
+
+# DEPLOY --------------------------------------------------------------------------------------------------------------
+
+# It's a good idea to work out the deployment pipeline before you invest too much in site content.
+#
+# Keep it simple for starters.
+#
+# 1. Add public/ to the .gitignore file.
+# 2. Stage all of the other files and commit to your local Git repository.
+# 3. Create a repository on GitHub and add it as a remote. Push to the remote repository.
+# 4. Create an account at https://www.netlify.com/. Sign up by using your GitHub profile.
+# 5. Press the "New site from Git" button. You'll be presented with three options:
+# 
+#    - GitHub
+#    - GitLab and
+#    - Bitbucket.
+# 
+#    Choose the one where you are hosting your remote repository (it's probably GitHub!).
+# 6. Select the repository for your new web site.
+# 7. Fill in "hugo" for "Build command" and "public" for "Publish directory".
+# 8. Press the "Deploy site" button.
+# 9. Be patient.
+
+# DEBUGGING:
+#
+# Errors during build...
+#
+# - Try using a specific version for the "Build command", for example, hugo_0.19.
+
+# EDITING CONTENT -----------------------------------------------------------------------------------------------------
+
+# You can now edit the Markdown files.
+#
+# Each time you save the server will regenerate the contents of the site and you'll just need to refresh your browser.
+#
+# Delete the default content files that were created initially.
+
+# CHANGING THEME ------------------------------------------------------------------------------------------------------
+
+# Browse through the themes available at http://themes.gohugo.io/.
+# 
+# When you find one that appeals to you, install it using the corresponding GitHub user and repository name.
+
+blogdown::install_theme('AlexFinn/simple-a')
+
+# Beware that some of these themes are under active development and might not work too well. Caveat emptor!
+
+# EXTENSIONS ----------------------------------------------------------------------------------------------------------
+
+# Try to do the following...
+# 
+# - embed a plotly visualisation;
+# - embed a visualisation from Tableau Public (press the Share button at the PAGE bottom to get the Embed Code); and
+# - see if you can hack the style files to change the appearance of the site.

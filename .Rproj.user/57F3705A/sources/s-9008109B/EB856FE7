@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1528814059773.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1017961708",
+    "id" : "EB856FE7",
+    "lastKnownWriteTime" : 1528814706,
+    "last_content_update" : 1528814706638,
+    "path" : "~/Downloads/test-blog/.gitignore",
+    "project_path" : ".gitignore",
+    "properties" : {
+        "cursorPosition" : "4,7",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "gitignore"
+}

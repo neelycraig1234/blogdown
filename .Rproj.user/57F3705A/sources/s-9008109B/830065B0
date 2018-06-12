@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1528812199873.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "830065B0",
+    "lastKnownWriteTime" : 1528812122,
+    "last_content_update" : 1528812122,
+    "path" : "~/Downloads/day-12/04-blogdown.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "71,0",
+        "scrollLine" : "58"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
